@@ -129,7 +129,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('render/01 Aerial.JPG');
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/webp/01-aerial.webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -139,6 +139,11 @@
             text-align: center;
             color: white;
             position: relative;
+        }
+
+        /* Fallback for browsers that don't support WebP */
+        .no-webp .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('render/01 Aerial.JPG');
         }
 
         .hero-content {
@@ -632,7 +637,10 @@
             
             <div class="villas-grid">
                 <div class="villa-card">
-                    <div class="villa-image" style="background-image: url('render/02 Facade.JPG')"></div>
+                    <picture class="villa-image">
+                        <source srcset="images/webp/02-facade.webp" type="image/webp">
+                        <div style="background-image: url('render/02 Facade.JPG'); width: 100%; height: 300px; background-size: cover; background-position: center;"></div>
+                    </picture>
                     <div class="villa-content">
                         <h3 class="villa-name">Villa Sebelah Kiri</h3>
                         <div class="villa-features">
@@ -646,7 +654,10 @@
                 </div>
                 
                 <div class="villa-card">
-                    <div class="villa-image" style="background-image: url('render/04 Pool 1.JPG')"></div>
+                    <picture class="villa-image">
+                        <source srcset="images/webp/04-pool.webp" type="image/webp">
+                        <div style="background-image: url('render/04 Pool 1.JPG'); width: 100%; height: 300px; background-size: cover; background-position: center;"></div>
+                    </picture>
                     <div class="villa-content">
                         <h3 class="villa-name">Villa Sebelah Kanan</h3>
                         <div class="villa-features">
@@ -716,42 +727,66 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('render/01 Aerial.JPG')"></div>
+                    <picture>
+                        <source srcset="images/webp/01-aerial.webp" type="image/webp">
+                        <div class="gallery-image" style="background-image: url('render/01 Aerial.JPG')"></div>
+                    </picture>
                     <div class="gallery-overlay">Aerial View</div>
                 </div>
                 
                 <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('render/02 Facade.JPG')"></div>
+                    <picture>
+                        <source srcset="images/webp/02-facade.webp" type="image/webp">
+                        <div class="gallery-image" style="background-image: url('render/02 Facade.JPG')"></div>
+                    </picture>
                     <div class="gallery-overlay">Facade Design</div>
                 </div>
                 
                 <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('render/03 Dining 1.JPG')"></div>
+                    <picture>
+                        <source srcset="images/webp/03-dining.webp" type="image/webp">
+                        <div class="gallery-image" style="background-image: url('render/03 Dining 1.JPG')"></div>
+                    </picture>
                     <div class="gallery-overlay">Dining Area</div>
                 </div>
                 
                 <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('render/04 Pool 1.JPG')"></div>
+                    <picture>
+                        <source srcset="images/webp/04-pool.webp" type="image/webp">
+                        <div class="gallery-image" style="background-image: url('render/04 Pool 1.JPG')"></div>
+                    </picture>
                     <div class="gallery-overlay">Pool Area</div>
                 </div>
                 
                 <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('render/05 Bedroom 1.JPG')"></div>
+                    <picture>
+                        <source srcset="images/webp/05-bedroom1.webp" type="image/webp">
+                        <div class="gallery-image" style="background-image: url('render/05 Bedroom 1.JPG')"></div>
+                    </picture>
                     <div class="gallery-overlay">Master Bedroom</div>
                 </div>
                 
                 <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('render/06 Living 2.JPG')"></div>
+                    <picture>
+                        <source srcset="images/webp/06-living.webp" type="image/webp">
+                        <div class="gallery-image" style="background-image: url('render/06 Living 2.JPG')"></div>
+                    </picture>
                     <div class="gallery-overlay">Living Space</div>
                 </div>
                 
                 <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('render/07 Bedroom 2.JPG')"></div>
+                    <picture>
+                        <source srcset="images/webp/07-bedroom2.webp" type="image/webp">
+                        <div class="gallery-image" style="background-image: url('render/07 Bedroom 2.JPG')"></div>
+                    </picture>
                     <div class="gallery-overlay">Second Bedroom</div>
                 </div>
                 
                 <div class="gallery-item">
-                    <div class="gallery-image" style="background-image: url('render/08 Bathroom 1.JPG')"></div>
+                    <picture>
+                        <source srcset="images/webp/08-bathroom.webp" type="image/webp">
+                        <div class="gallery-image" style="background-image: url('render/08 Bathroom 1.JPG')"></div>
+                    </picture>
                     <div class="gallery-overlay">Bathroom</div>
                 </div>
             </div>
@@ -841,6 +876,56 @@
     </footer>
 
     <script>
+        // WebP support detection
+        function supportsWebP() {
+            return new Promise(resolve => {
+                const webP = new Image();
+                webP.onload = webP.onerror = () => resolve(webP.height === 2);
+                webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+            });
+        }
+
+        // Initialize WebP support
+        supportsWebP().then(hasWebP => {
+            if (!hasWebP) {
+                document.documentElement.classList.add('no-webp');
+            }
+            
+            // Update gallery images based on WebP support
+            const galleryItems = document.querySelectorAll('.gallery-item picture');
+            galleryItems.forEach((picture, index) => {
+                const imageNames = [
+                    '01-aerial', '02-facade', '03-dining', '04-pool',
+                    '05-bedroom1', '06-living', '07-bedroom2', '08-bathroom'
+                ];
+                const originalNames = [
+                    '01 Aerial.JPG', '02 Facade.JPG', '03 Dining 1.JPG', '04 Pool 1.JPG',
+                    '05 Bedroom 1.JPG', '06 Living 2.JPG', '07 Bedroom 2.JPG', '08 Bathroom 1.JPG'
+                ];
+                
+                const galleryDiv = picture.querySelector('.gallery-image');
+                if (hasWebP) {
+                    galleryDiv.style.backgroundImage = `url('images/webp/${imageNames[index]}.webp')`;
+                } else {
+                    galleryDiv.style.backgroundImage = `url('render/${originalNames[index]}')`;
+                }
+            });
+
+            // Update villa images based on WebP support
+            const villaImages = document.querySelectorAll('.villa-card picture');
+            villaImages.forEach((picture, index) => {
+                const webpNames = ['02-facade.webp', '04-pool.webp'];
+                const jpgNames = ['02 Facade.JPG', '04 Pool 1.JPG'];
+                
+                const villaDiv = picture.querySelector('div');
+                if (hasWebP) {
+                    villaDiv.style.backgroundImage = `url('images/webp/${webpNames[index]}')`;
+                } else {
+                    villaDiv.style.backgroundImage = `url('render/${jpgNames[index]}')`;
+                }
+            });
+        });
+
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
@@ -883,6 +968,23 @@
         document.querySelectorAll('.section').forEach(section => {
             observer.observe(section);
         });
+
+        // Lazy loading for images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('.gallery-image').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
     </script>
 </body>
 </html>
