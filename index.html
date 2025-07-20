@@ -581,8 +581,17 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .nav-container {
+                justify-content: center;
+            }
+            
             .nav-menu {
                 display: none;
+            }
+            
+            .logo svg {
+                width: 140px;
+                height: 35px;
             }
             
             .hero-buttons {
@@ -609,6 +618,17 @@
             
             .gallery-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo svg {
+                width: 120px;
+                height: 30px;
+            }
+            
+            .logo svg text {
+                font-size: 12px;
             }
         }
 
@@ -655,8 +675,8 @@
                     <li><a href="#gallery" class="nav-link">Gallery</a></li>
                     <li><a href="#features" class="nav-link">Features</a></li>
                     <li><a href="#location" class="nav-link">Location</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                <a href="#contact" class="nav-cta">Contact</a>
             </div>
         </div>
     </nav>
