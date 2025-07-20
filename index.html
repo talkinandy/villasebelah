@@ -129,7 +129,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/webp/hero/01-aerial-hero.webp');
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/webp/hero/aerial-tropical-hero.webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -143,7 +143,7 @@
 
         /* Fallback for browsers that don't support WebP */
         .no-webp .hero {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('render/01 Aerial.JPG');
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('render/image_render_mis.png');
         }
 
         .hero-content {
@@ -728,10 +728,10 @@
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <picture>
-                        <source srcset="images/webp/medium/01-aerial-medium.webp" type="image/webp">
-                        <div class="gallery-image" style="background-image: url('render/01 Aerial.JPG')"></div>
+                        <source srcset="images/webp/medium/aerial-tropical-medium.webp" type="image/webp">
+                        <div class="gallery-image" style="background-image: url('render/image_render_mis.png')"></div>
                     </picture>
-                    <div class="gallery-overlay">Aerial View</div>
+                    <div class="gallery-overlay">Tropical Aerial View</div>
                 </div>
                 
                 <div class="gallery-item">
@@ -895,11 +895,11 @@
             const galleryItems = document.querySelectorAll('.gallery-item picture');
             galleryItems.forEach((picture, index) => {
                 const imageNames = [
-                    '01-aerial-medium', '02-facade-medium', '03-dining-medium', '04-pool-medium',
+                    'aerial-tropical-medium', '02-facade-medium', '03-dining-medium', '04-pool-medium',
                     '05-bedroom1-medium', '06-living-medium', '07-bedroom2-medium', '08-bathroom-medium'
                 ];
                 const originalNames = [
-                    '01 Aerial.JPG', '02 Facade.JPG', '03 Dining 1.JPG', '04 Pool 1.JPG',
+                    'image_render_mis.png', '02 Facade.JPG', '03 Dining 1.JPG', '04 Pool 1.JPG',
                     '05 Bedroom 1.JPG', '06 Living 2.JPG', '07 Bedroom 2.JPG', '08 Bathroom 1.JPG'
                 ];
                 
