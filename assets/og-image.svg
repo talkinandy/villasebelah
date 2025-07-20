@@ -1,0 +1,30 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1200" height="630" fill="linear-gradient(135deg, #e8ede6 0%, #f5f5f5 100%)"/>
+    
+    <!-- Villa Icon Large -->
+    <g transform="translate(300, 315)">
+        <path d="M -50,-30 L 0,-70 L 50,-30 L 50,40 L -50,40 Z" 
+              fill="none" 
+              stroke="#4a5c47" 
+              stroke-width="5"/>
+        <line x1="0" y1="-70" x2="0" y2="40" stroke="#4a5c47" stroke-width="4"/>
+        <line x1="-25" y1="-30" x2="-25" y2="40" stroke="#4a5c47" stroke-width="4"/>
+        <line x1="25" y1="-30" x2="25" y2="40" stroke="#4a5c47" stroke-width="4"/>
+    </g>
+    
+    <!-- Title -->
+    <text x="450" y="280" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="300">
+        <tspan fill="#999">VILLA</tspan><tspan fill="#4a5c47">SEBELAH</tspan>
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="450" y="340" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="400" fill="#666">
+        Modern Luxury in Kuta Lombok
+    </text>
+    
+    <!-- Description -->
+    <text x="450" y="390" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="400" fill="#999">
+        Twin Villas with Flexible Living Spaces • Coming Soon 2026
+    </text>
+</svg>

@@ -1,0 +1,11 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(40, 40)">
+        <path d="M -20,-12 L 0,-28 L 20,-12 L 20,16 L -20,16 Z" 
+              fill="none" 
+              stroke="#4a5c47" 
+              stroke-width="2.5"/>
+        <line x1="0" y1="-28" x2="0" y2="16" stroke="#4a5c47" stroke-width="2"/>
+        <line x1="-10" y1="-12" x2="-10" y2="16" stroke="#4a5c47" stroke-width="2"/>
+        <line x1="10" y1="-12" x2="10" y2="16" stroke="#4a5c47" stroke-width="2"/>
+    </g>
+</svg>
