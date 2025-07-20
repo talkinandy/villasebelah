@@ -108,6 +108,13 @@
             color: var(--primary-color);
             text-decoration: none;
             letter-spacing: -0.5px;
+            display: block;
+        }
+
+        .logo svg {
+            width: 180px;
+            height: 45px;
+            transition: var(--transition);
         }
 
         .nav-menu {
@@ -590,8 +597,21 @@
             }
             
             .logo svg {
-                width: 140px;
-                height: 35px;
+                width: 160px;
+                height: 40px;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: var(--text-dark);
+                cursor: pointer;
             }
             
             .hero-buttons {
@@ -623,12 +643,32 @@
 
         @media (max-width: 480px) {
             .logo svg {
-                width: 120px;
-                height: 30px;
+                width: 140px;
+                height: 35px;
             }
             
             .logo svg text {
-                font-size: 12px;
+                font-size: 13px;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+        }
+        
+        /* Better desktop logo sizing */
+        @media (min-width: 1200px) {
+            .logo svg {
+                width: 200px;
+                height: 50px;
+            }
+            
+            .logo svg text {
+                font-size: 16px;
             }
         }
 
@@ -652,23 +692,24 @@
         <div class="container">
             <div class="nav-container">
                 <a href="#" class="logo">
-                    <svg width="160" height="40" viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="180" height="45" viewBox="0 0 180 45" xmlns="http://www.w3.org/2000/svg">
                         <!-- Logo Icon -->
-                        <g transform="translate(16, 20)">
-                            <path d="M -10,-6 L 0,-14 L 10,-6 L 10,8 L -10,8 Z" 
+                        <g transform="translate(18, 22.5)">
+                            <path d="M -11,-6.75 L 0,-15.75 L 11,-6.75 L 11,9 L -11,9 Z" 
                                   fill="none" 
                                   stroke="#4a5c47" 
-                                  stroke-width="1.5"/>
-                            <line x1="0" y1="-14" x2="0" y2="8" stroke="#4a5c47" stroke-width="1"/>
-                            <line x1="-5" y1="-6" x2="-5" y2="8" stroke="#4a5c47" stroke-width="1"/>
-                            <line x1="5" y1="-6" x2="5" y2="8" stroke="#4a5c47" stroke-width="1"/>
+                                  stroke-width="1.8"/>
+                            <line x1="0" y1="-15.75" x2="0" y2="9" stroke="#4a5c47" stroke-width="1.2"/>
+                            <line x1="-5.5" y1="-6.75" x2="-5.5" y2="9" stroke="#4a5c47" stroke-width="1.2"/>
+                            <line x1="5.5" y1="-6.75" x2="5.5" y2="9" stroke="#4a5c47" stroke-width="1.2"/>
                         </g>
                         <!-- Typography -->
-                        <text x="36" y="25" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500">
+                        <text x="40" y="28" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500">
                             <tspan fill="#666">VILLA</tspan><tspan fill="#4a5c47">SEBELAH</tspan>
                         </text>
                     </svg>
                 </a>
+                <button class="mobile-menu-toggle">☰</button>
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#villas" class="nav-link">The Villas</a></li>

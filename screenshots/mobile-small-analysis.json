@@ -1,0 +1,57 @@
+{
+  "size": {
+    "name": "mobile-small",
+    "width": 320,
+    "height": 568,
+    "description": "iPhone SE"
+  },
+  "analysis": {
+    "logo": {
+      "width": 140,
+      "height": 35,
+      "visible": true
+    },
+    "heroTitle": {
+      "fontSize": "40px",
+      "lineHeight": "48px",
+      "visible": true
+    },
+    "navLinks": [
+      {
+        "text": "Home",
+        "fontSize": "16px",
+        "visible": false
+      },
+      {
+        "text": "The Villas",
+        "fontSize": "16px",
+        "visible": false
+      },
+      {
+        "text": "Gallery",
+        "fontSize": "16px",
+        "visible": false
+      },
+      {
+        "text": "Features",
+        "fontSize": "16px",
+        "visible": false
+      },
+      {
+        "text": "Location",
+        "fontSize": "16px",
+        "visible": false
+      },
+      {
+        "text": "Contact",
+        "fontSize": "16px",
+        "visible": false
+      }
+    ],
+    "ctaButton": null,
+    "viewport": {
+      "width": 320,
+      "height": 568
+    }
+  }
+}

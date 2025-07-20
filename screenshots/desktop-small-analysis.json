@@ -1,0 +1,57 @@
+{
+  "size": {
+    "name": "desktop-small",
+    "width": 1366,
+    "height": 768,
+    "description": "Small Desktop"
+  },
+  "analysis": {
+    "logo": {
+      "width": 200,
+      "height": 50,
+      "visible": true
+    },
+    "heroTitle": {
+      "fontSize": "64px",
+      "lineHeight": "76.8px",
+      "visible": true
+    },
+    "navLinks": [
+      {
+        "text": "Home",
+        "fontSize": "16px",
+        "visible": true
+      },
+      {
+        "text": "The Villas",
+        "fontSize": "16px",
+        "visible": true
+      },
+      {
+        "text": "Gallery",
+        "fontSize": "16px",
+        "visible": true
+      },
+      {
+        "text": "Features",
+        "fontSize": "16px",
+        "visible": true
+      },
+      {
+        "text": "Location",
+        "fontSize": "16px",
+        "visible": true
+      },
+      {
+        "text": "Contact",
+        "fontSize": "16px",
+        "visible": true
+      }
+    ],
+    "ctaButton": null,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    }
+  }
+}
